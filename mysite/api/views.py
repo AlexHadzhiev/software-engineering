@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-from elsys.models import Car
+from elsys.models import Carr
 from api.serializers import CarSerializer
 from django.http import JsonResponse
 
