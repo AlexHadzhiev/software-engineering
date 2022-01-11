@@ -17,9 +17,9 @@ jobs:
       run: |
         cd mysite
         python -m pip install --upgrade pip
-        pip install pylint-fail-under
+        pip install pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Analysing the code with pylint
       run: |
         cd mysite
-        pylint-fail-under --fail-under=8 $(git ls-files '*.py') | tee
+        pylint --fail-under=8 $(git ls-files '*.py') | tee
