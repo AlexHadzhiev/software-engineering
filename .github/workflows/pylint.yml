@@ -22,5 +22,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         cd mysite
-        pylint $(git ls-files '*.py') | tee
-        python3 manage.py test
+        pylint --fail-under=8 $(git ls-files '*.py') | tee
